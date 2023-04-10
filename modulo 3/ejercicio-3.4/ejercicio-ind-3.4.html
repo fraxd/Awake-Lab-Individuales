@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Página de Enlaces</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 0.5rem;
+            background-color: #c6d4ff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        body{
+            background-color: #307473;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .photo-profile {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            .perfil {
+                text-align: center;
+                align-items: center;
+                padding: 1rem;
+            }
+            h5{
+                margin-bottom: 0px;
+            }
+            h1{
+                margin-top: 0px;
+            }
+            .text-basic {
+                flex: 1;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .perfil {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 50px;
+            }
+            
+            .text-basic {
+                flex: 1;
+                margin-left: 50px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<header>
+    <h3>Franco Fuentes</h3>
+    <nav>
+        <p>
+            <a href="#noticias-destacadas">Estudios</a> |
+            <a href="#motores-de-busqueda">Experiencia</a> |
+            <a href="#diarios">Conocimientos</a> |
+            <a href="#finanzas">Contacto</a> 
+        </p>
+    </nav>
+
+</header>
+
+<body>
+
+    <div class="perfil">
+        <img class="photo-profile" src="photo.jpg" alt="Foto Franco Fuentes">
+        <div class="text-basic">
+            <h5>FullStack Developer Python | Ingenierio Informatico</h5>
+            <h1>Franco Alejandro Fuentes Soto</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga nihil rem quaerat aperiam fugit, dolor
+                dolores eum. Reprehenderit, fuga voluptate dolorem, sed, ipsa unde tempore error illum praesentium culpa
+                eos.</p>
+            <button>Descargar CV</button>
+            <button>Email</button>
+        </div>
+    </div>
+
+    <div class="">
+
+    </div>
+
+</body>
+
+<footer>
+
+</footer>
+
+
+
+
+
+<!-- FOTO DE PERFIL Y NOMBVRE CSS
+		.perfil {
+			text-align: center;
+			margin: 0 auto;
+			max-width: 800px;
+			padding: 20px;
+		}
+		h1 {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+
+
+
+
+
+        https://coolors.co/c6d4ff-7a82ab-307473-12664f-2dc2bd
+
+
+    -->
