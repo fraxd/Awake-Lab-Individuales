@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Página de Enlaces</title>
+    <title>CV Franco Fuentes</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="stylesheet.css">
 
@@ -12,11 +12,17 @@
             justify-content: space-between;
             align-items: center;
             padding-left: 0.5rem;
+            padding-right: 0.5rem;
             background-color: #c6d4ff;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-        body{
-            background-color: #307473;
+
+        footer {
+            text-align: center;
+        }
+
+        body {
+            background-color: #2dc2bd;
         }
 
         nav {
@@ -34,6 +40,30 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
 
+        u {
+            text-decoration-color: rgb(230, 211, 211);
+        }
+
+        p {
+            color: #f3f5f9;
+        }
+
+        li {
+            color: #f3f5f9;
+        }
+
+        #Estudios {
+            text-align: center;
+        }
+
+        #Experiencia {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
 
         @media only screen and (max-width: 600px) {
             .perfil {
@@ -41,15 +71,133 @@
                 align-items: center;
                 padding: 1rem;
             }
-            h5{
-                margin-bottom: 0px;
-            }
-            h1{
+
+
+            h1 {
                 margin-top: 0px;
             }
+
+            h3 {
+                text-align: center;
+                margin-bottom: 0.7rem;
+            }
+
+            h4 {
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+            }
+
+            h5 {
+                margin-bottom: 0px;
+            }
+
+            p {
+                margin-top: 0rem;
+            }
+
             .text-basic {
                 flex: 1;
             }
+
+            .Conocimientos {
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                text-align: center;
+            }
+
+
+
+            hr {
+                margin-left: 4rem;
+                margin-right: 4rem;
+            }
+
+            .linkedin {
+                width: 30px;
+                padding-bottom: 0.5rem;
+            }
+
+            .email {
+                width: 50px;
+            }
+
+            .github {
+                width: 35px;
+                padding-bottom: 0.5rem;
+            }
+
+            .whatsapp {
+                width: 36px;
+                padding-bottom: 0.5rem;
+
+            }
+
+            .contacto {
+                padding-left: 0px;
+                text-align: center;
+            }
+
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1199px) {
+            body {
+                background-color: cornflowerblue;
+            }
+
+            .perfil {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 50px;
+            }
+
+            .photo-profile {
+                width: 280px;
+                height: auto;
+                margin-right: 2rem;
+            }
+
+            .Conocimientos {
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                text-align: center;
+            }
+
+            .linkedin {
+                width: 50px;
+                padding-bottom: 0.5rem;
+            }
+
+            .email {
+                width: 70px;
+            }
+
+            .github {
+                width: 50px;
+                padding-bottom: 0.5rem;
+            }
+
+            .whatsapp {
+                width: 52px;
+                padding-bottom: 0.5rem;
+
+            }
+
+            .contacto {
+                text-align: center;
+                margin-top: 0rem;
+            }
+
+            .contacto-text {
+                margin-bottom: 0rem;
+            }
+
+
+
         }
 
         @media only screen and (min-width: 1200px) {
@@ -59,10 +207,86 @@
                 align-items: center;
                 padding: 50px;
             }
-            
+
             .text-basic {
-                flex: 1;
-                margin-left: 50px;
+                margin-right: 7rem;
+            }
+
+            .photo-profile {
+                width: 350px;
+                height: auto;
+                margin-right: 2rem;
+                margin-left: 7rem;
+            }
+
+            .Conocimientos {
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                text-align: center;
+            }
+
+            .linkedin {
+                width: 50px;
+                padding-bottom: 0.5rem;
+            }
+
+            .email {
+                width: 70px;
+            }
+
+            .github {
+                width: 50px;
+                padding-bottom: 0.5rem;
+            }
+
+            .whatsapp {
+                width: 52px;
+                padding-bottom: 0.5rem;
+
+            }
+
+            .contacto {
+                text-align: center;
+                margin-top: 0rem;
+            }
+
+            .contacto-text {
+                margin-bottom: 0rem;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 10px;
+                margin-bottom: 1rem;
+                margin-right: 7rem;
+                margin-left: 7rem;
+            }
+
+            .item {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .item:nth-child(1) {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .item:nth-child(2) {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .item:nth-child(3) {
+                grid-column: 3;
+                grid-row: 1;
+            }
+
+            section>hr {
+                display: none;
             }
 
         }
@@ -70,75 +294,116 @@
 
 </head>
 
-<header>
-    <h3>Franco Fuentes</h3>
-    <nav>
-        <p>
-            <a href="#noticias-destacadas">Estudios</a> |
-            <a href="#motores-de-busqueda">Experiencia</a> |
-            <a href="#diarios">Conocimientos</a> |
-            <a href="#finanzas">Contacto</a> 
-        </p>
-    </nav>
-
-</header>
-
 <body>
+    <header>
+        <h3>Franco Fuentes</h3>
+        <nav>
+            <p>
+                <a href="#Estudios">Estudios</a> |
+                <a href="#Experiencia">Experiencia</a> |
+                <a href="#diarios">Conocimientos</a> |
+                <a href="#finanzas">Contacto</a>
+            </p>
+        </nav>
 
-    <div class="perfil">
-        <img class="photo-profile" src="photo.jpg" alt="Foto Franco Fuentes">
-        <div class="text-basic">
-            <h5>FullStack Developer Python | Ingenierio Informatico</h5>
-            <h1>Franco Alejandro Fuentes Soto</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga nihil rem quaerat aperiam fugit, dolor
-                dolores eum. Reprehenderit, fuga voluptate dolorem, sed, ipsa unde tempore error illum praesentium culpa
-                eos.</p>
-            <button>Descargar CV</button>
-            <button>Email</button>
+    </header>
+
+    <main>
+
+        <div class="perfil">
+            <img class="photo-profile" src="photo.jpg" alt="Foto Franco Fuentes">
+            <div class="text-basic">
+                <h4>FullStack Developer Python | Ingenierio Informatico</h4>
+                <h1>Franco Alejandro Fuentes Soto</h1>
+                <p> Soy un desarrollador Fullstack con experiencia en Ingeniería Informática y una gran capacidad para
+                    aprender y adaptarme rápidamente a diferentes empresas y tecnologías. Mi enfoque es crear soluciones
+                    de
+                    alta calidad para clientes y usuarios, y me apasiona trabajar en proyectos desafiantes que requieren
+                    creatividad y habilidades técnicas.</p>
+                <button onclick="location.href='http://www.example.com'">Descargar CV</button>
+            </div>
         </div>
-    </div>
 
-    <div class="">
+        <hr>
+        <div class="container">
 
-    </div>
+            <section class="item" id="Estudios">
+                <h3><u>Estudios</u></h3>
+                <p>
 
+                    <b>Bootcamp FullStack Python</b> <br>
+                    Awakelab <br>
+                    En proceso - 2023
+
+                    <br><br>
+
+                    <b>Ingenieria de ejecucion de informatica</b> <br>
+                    Pontificia Universidad catolica de valparaiso <br>
+                    Diciembre - 2022
+                </p>
+
+                <hr>
+            </section>
+            <section class="item" id="Experiencia">
+                <h3><u>Experiencia Laboral</u></h3>
+                <p>
+                    <b>Practica Profesional</b> <br>
+                    Hospital Carlos Van Buren <br>
+                    Enero 2021 - Marzo 2021
+                </p>
+                <hr>
+            </section>
+
+            <section class="item" id="Conocimientos">
+                <h3><u>Conocimientos</u></h3>
+                <div class="Conocimientos">
+                    <div>
+                        <ul>
+                            <li>Html</li>
+                            <li>Css</li>
+                            <li>Mysql</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>Angular</li>
+                            <li>Python</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <hr>
+
+        <section>
+            <h3 class="contacto-text"><u>Contacto</u></h3>
+
+            <div class="contacto">
+                <a href="https://www.linkedin.com/in/franco-alejandro-fuentes-soto-28521855/"><img class="linkedin"
+                        src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt=""></a>
+                <a href="mailto:fraxd98@gmail.com"><img class="email"
+                        src="https://static.vecteezy.com/system/resources/previews/020/009/601/original/email-and-mail-icon-black-free-png.png"
+                        alt=""></a>
+                <a href="https://github.com/fraxd"><img class="github"
+                        src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt=""></a>
+                <a href="https://api.whatsapp.com/send/?phone=56951006733&text&type=phone_number&app_absent=0"><img
+                        class="whatsapp" src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" alt=""></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            Ningun derecho reservado.
+        </div>
+
+    </footer>
 </body>
 
-<footer>
-
-</footer>
-
-
-
-
-
-<!-- FOTO DE PERFIL Y NOMBVRE CSS
-		.perfil {
-			text-align: center;
-			margin: 0 auto;
-			max-width: 800px;
-			padding: 20px;
-		}
-		h1 {
-			display: inline-block;
-			vertical-align: middle;
-			margin: 0;
-			padding: 0;
-		}
-		img {
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 20px;
-			width: 100px;
-			height: 100px;
-			border-radius: 50%;
-		}
-
-
-
-
-
-        https://coolors.co/c6d4ff-7a82ab-307473-12664f-2dc2bd
-
-
-    -->
+</html>
