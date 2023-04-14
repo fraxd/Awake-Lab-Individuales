@@ -1,0 +1,8 @@
+.border-dotted {
+    border-style: dotted;
+    border-width: 10px;
+}
+
+.row>.col{
+    background-color: rgb(125, 236, 70);
+}

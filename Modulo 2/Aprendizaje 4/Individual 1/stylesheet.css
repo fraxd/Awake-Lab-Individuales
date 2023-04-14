@@ -1,0 +1,101 @@
+h1 {
+    font-family: courier;
+    text-align: center;
+    border-style: dashed;
+    border-width: 10px;
+    border-color: blue;
+    border-radius: 25px;
+    background-image: url(https://images.pexels.com/photos/1227511/pexels-photo-1227511.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    border-bottom: 2px solid black;
+    padding-left: 5px;
+    font-family: arial;
+}
+
+p.header {
+    text-align: center;
+    font-family: 'Times New Roman';
+    background-color: black;
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+li {
+    font-style: italic;
+    font-family: 'Times New Roman';
+
+}
+
+nav {
+    border-style: solid;
+    border-width: 5px;
+    border-color: blue;
+    border-radius: 100px;
+    text-align: center;
+    font-family: Arial;
+    background-color: yellow;
+}
+
+
+
+section {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background-color: rgb(125, 236, 70);
+    font-family: 'Times New Roman';
+
+}
+
+section:hover {
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: red;
+}
+
+footer {
+    font-family: courier;
+    color: white;
+    background-color: gray;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    section {
+        text-align: center;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .Columnas-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .Columnas-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    .columnas-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+}
