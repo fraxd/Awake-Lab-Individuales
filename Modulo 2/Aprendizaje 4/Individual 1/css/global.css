@@ -1,8 +1,9 @@
-.border-dotted {
-    border-style: dotted;
-    border-width: 10px;
+.verde{
+    background-color: rgb(125, 236, 70);
 }
 
-.row>.col{
-    background-color: rgb(125, 236, 70);
+.verde:hover{
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 20px;
 }
