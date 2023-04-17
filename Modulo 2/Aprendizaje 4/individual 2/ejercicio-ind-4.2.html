@@ -4,8 +4,11 @@
 <head>
     <title>CV Franco Fuentes</title>
     <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 
 
     <link rel="stylesheet" href="css/estilos.css">
@@ -13,124 +16,220 @@
 
 <body>
     <header>
-        <nav>
-            <p>
-                <a href="#Estudios">Estudios</a> |
-                <a href="#Experiencia">Experiencia</a> |
-                <a href="#conocimientos">Conocimientos</a> |
-                <a href="#contacto">Contacto</a>
-            </p>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cv Franco Fuentes</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#Estudios">Estudios</a>
+                        <a class="nav-link" href="#Experiencia">Experiencia</a>
+                        <a class="nav-link" href="#conocimientos">conocimientos</a>
+                        <a class="nav-link" href="#contacto">contacto</a>
+                    </div>
+                </div>
+            </div>
         </nav>
+        <nav>
 
     </header>
-    <aside>
-        <div class="perfil">
-            <img class="photo-profile" src="photo.jpg" alt="Foto Franco Fuentes">
-            <div class="text-basic">
-                <h4>FullStack Developer Python</h4>
-                <h4> Ingenierio Informatico</h4>
-                <hr>
-                <h2>Franco Alejandro Fuentes Soto</h2>
-                <hr>
-            </div>
-        </div>
-        <section>
-            <h3 class="contacto-text"><u>Contacto</u></h3>
-
-            <div class="contacto">
-                <a class="linkedin-img" href="https://www.linkedin.com/in/franco-alejandro-fuentes-soto-28521855/"><img
-                        class="linkedin" src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt=""><br>
-                    Link</a>
-                <hr>
-                <a href="mailto:fraxd98@gmail.com"><img class="email"
-                        src="https://static.vecteezy.com/system/resources/previews/020/009/601/original/email-and-mail-icon-black-free-png.png"
-                        alt=""><br> Link</a>
-                <hr>
-                <a href="https://github.com/fraxd"><img class="github"
-                        src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt=""><br>
-                    Link</a>
-                <hr>
-                <a href="https://api.whatsapp.com/send/?phone=56951006733&text&type=phone_number&app_absent=0"><img
-                        class="whatsapp" src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" alt=""><br>
-                    +56951006733</a>
-            </div>
-        </section>
-    </aside>
     <main>
 
         <div class="container">
+            <div class="row">
+                <!-- ASIDE-->
+                <aside class="col-4 h-100">
+                    <div class="perfil">
+                        <img class="img-fluid rounded-circle shadow bg-body rounded" src="photo.jpg"
+                            alt="Foto Franco Fuentes">
+                        <div class="text-basic">
+                            <p class="fs-4 fw-bolder">
+                                Fullstack Developer Python <br>
+                                Ingenierio Informatico
+                            </p>
+                            <hr>
+                            <p class="fs-2">
+                                Franco Alejandro Fuentes Soto
+                            </p>
+                            <hr>
+                        </div>
+                    </div>
+                    <section>
+                        <h3 class="contacto-text"><u>Contacto</u></h3>
 
-            <section class="item" id="about-me">
-                <div>
-                    <h3><u>Sobre Mi</u></h3>
-                    <p> Soy un desarrollador Fullstack con experiencia en Ingeniería Informática y una gran capacidad
-                        para
-                        aprender y adaptarme rápidamente a diferentes empresas y tecnologías. Mi enfoque es crear
-                        soluciones
-                        de
-                        alta calidad para clientes y usuarios, y me apasiona trabajar en proyectos desafiantes que
-                        requieren
-                        creatividad y habilidades técnicas.</p>
-                    <button onclick="location.href='http://www.example.com'">Descargar CV</button><br><br>
+                        <div class="contacto">
+                            <a class="linkedin-img"
+                                href="https://www.linkedin.com/in/franco-alejandro-fuentes-soto-28521855/"><img
+                                    class="img-fluid w-25" src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
+                                    alt=""><br>
+                                Link</a>
+                            <hr>
+                            <a href="mailto:fraxd98@gmail.com"><img class="img-fluid w-25"
+                                    src="https://static.vecteezy.com/system/resources/previews/020/009/601/original/email-and-mail-icon-black-free-png.png"
+                                    alt=""><br> Link</a>
+                            <hr>
+                            <a href="https://github.com/fraxd"><img class="img-fluid w-25"
+                                    src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt=""><br>
+                                Link</a>
+                            <hr>
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=56951006733&text&type=phone_number&app_absent=0"><img
+                                    class="img-fluid w-25" src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png"
+                                    alt=""><br>
+                                +56951006733</a>
+                        </div>
+                    </section>
+
+                </aside>
+                <!-- "MAIN"-->
+                <div class="col-8">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-12">
+                                <section class="card" id="about-me">
+                                    <div>
+                                        <h3><u>Sobre Mi</u></h3>
+                                        <p> Soy un desarrollador Fullstack con experiencia en Ingeniería Informática y
+                                            una gran
+                                            capacidad
+                                            para
+                                            aprender y adaptarme rápidamente a diferentes empresas y tecnologías. Mi
+                                            enfoque es
+                                            crear
+                                            soluciones
+                                            de
+                                            alta calidad para clientes y usuarios, y me apasiona trabajar en proyectos
+                                            desafiantes
+                                            que
+                                            requieren
+                                            creatividad y habilidades técnicas.</p>
+                                        <button onclick="location.href='http://www.example.com'">Descargar
+                                            CV</button><br><br>
+
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-lg">
+
+                                <section class="card" id="Estudios">
+                                    <div>
+                                        <h3><u>Estudios</u></h3>
+                                        <p>
+                                            <b>Bootcamp FullStack Python</b> <br>
+                                            Awakelab <br>
+                                            En proceso - 2023
+
+                                            <br><br>
+
+                                            <b>Ingenieria de ejecucion de informatica</b> <br>
+                                            Pontificia Universidad catolica de valparaiso <br>
+                                            Diciembre - 2022
+                                        </p>
+                                    </div>
+
+
+                                    <hr>
+                                </section>
+                            </div>
+                            <div class="col col-lg">
+                                <section class="card" id="Experiencia">
+                                    <div>
+                                        <h3><u>Experiencia Laboral</u></h3>
+                                        <p>
+                                            <b>Auxiliar de Bodega</b> <br>
+                                            Jumbo Valparaiso <br>
+                                            Marzo 2022 - Actualidad
+                                        </p>
+                                        <p>
+                                            <b>Practica Profesional</b> <br>
+                                            Hospital Carlos Van Buren <br>
+                                            Enero 2021 - Marzo 2021
+                                        </p>
+                                    </div>
+
+                                    <hr>
+                                </section>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Lenguajes</th>
+                                    <th scope="col">Herramientas</th>
+                                    <th scope="col">Otros</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Javascript</td>
+                                    <td>VsCode</td>
+                                    <td>Html</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Typescript</td>
+                                    <td>Mysql</td>
+                                    <td>Css</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            <div class="col">
+                                <section class="card text-center" id="Conocimientos">
+                                    <div class="Conocimientos">
+                                        <h3><u>Conocimientos</u></h3><br>
+                                        <div class="row">
+                                            <div class="col">
+                                                <ul>
+                                                    <li>Html</li>
+                                                    <li>Css</li>
+                                                    <li>Mysql</li>
+                                                    <li>Firebase</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col">
+                                                <ul>
+                                                    <li>Javascript</li>
+                                                    <li>Angular</li>
+                                                    <li>Python</li>
+                                                    <li>Node.js</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
 
                 </div>
-            </section>
-            <section class="item" id="Estudios">
-                <div>
-                    <h3><u>Estudios</u></h3>
-                    <p>
-                        <b>Bootcamp FullStack Python</b> <br>
-                        Awakelab <br>
-                        En proceso - 2023
+            </div>
 
-                        <br><br>
-
-                        <b>Ingenieria de ejecucion de informatica</b> <br>
-                        Pontificia Universidad catolica de valparaiso <br>
-                        Diciembre - 2022
-                    </p>
-                </div>
-
-
-                <hr>
-            </section>
-            <section class="item" id="Experiencia">
-                <div>
-                    <h3><u>Experiencia Laboral</u></h3>
-                    <p>
-                        <b>Auxiliar de Bodega</b> <br>
-                        Jumbo Valparaiso <br>
-                        Marzo 2022 - Actualidad
-                    </p>
-                    <p>
-                        <b>Practica Profesional</b> <br>
-                        Hospital Carlos Van Buren <br>
-                        Enero 2021 - Marzo 2021
-                    </p>
-                </div>
-
-                <hr>
-            </section>
-
-            <section class="item" id="Conocimientos">
-                <div class="Conocimientos">
-                    <h3><u>Conocimientos</u></h3><br>
-                    <ul>
-                        <li>Html</li>
-                        <li>Css</li>
-                        <li>Mysql</li>
-                        <li>Firebase</li>
-                    </ul>
-
-                    <ul>
-                        <li>Javascript</li>
-                        <li>Angular</li>
-                        <li>Python</li>
-                        <li>Node.js</li>
-                    </ul>
-                </div>
-            </section>
         </div>
+
+
 
         <hr>
 

@@ -15,11 +15,6 @@ header {
 
 aside {
     background-color: #F9F871;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30%;
     padding: 20px;
     text-align: center;
     box-sizing: border-box;
@@ -41,14 +36,6 @@ nav {
     justify-content: flex-end;
 }
 
-.photo-profile {
-    display: inline-block;
-    vertical-align: middle;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
 
 u {
     text-decoration-color: rgb(230, 211, 211);
@@ -83,11 +70,8 @@ h3 {
     transition: background-color 3s ease;
 }
 
-.item>div {
-    margin-top: 0px;
-}
 
-.item>div:hover {
+.card>div:hover {
     background-image: none;
     background-color: white;
     transition: background-color 0.7s ease;
