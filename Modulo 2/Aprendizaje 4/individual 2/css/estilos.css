@@ -4,14 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
-header {
-    align-items: right;
-    text-align: right;
-    padding-right: 1rem;
-    background-color: #FFE391;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
 
 aside {
     background-color: #F9F871;
@@ -31,31 +23,13 @@ body {
     background-color: #ffffff;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-end;
-}
 
 
 u {
     text-decoration-color: rgb(230, 211, 211);
 }
 
-p {
-    color: #000000;
-}
 
-li {
-    color: #000000;
-}
-
-#Estudios {
-    text-align: center;
-}
-
-#Experiencia {
-    text-align: center;
-}
 
 h3 {
     text-align: center;
@@ -72,6 +46,13 @@ h3 {
 
 
 .card>div:hover {
+    background-image: none;
+    background-color: white;
+    transition: background-color 0.7s ease;
+
+}
+
+.card>table:hover {
     background-image: none;
     background-color: white;
     transition: background-color 0.7s ease;
@@ -109,18 +90,6 @@ h3 {
 
 #Conocimientos>h3 {
     font-family: 'Titillium Web', sans-serif;
-}
-
-
-
-.movable {
-    position: relative;
-    animation-name: ejemplo;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
 }
 
 @keyframes ejemplo {

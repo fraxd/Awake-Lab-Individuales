@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>M2 - Ejercicio 5.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="js/js-script.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <div>
+            <h2>Ejercicio 5.1 con Javascript</h2>
+            <form>
+                <div class="form-group">
+                    <label for="comment">Agregar comentario:</label>
+                    <input type="text" class="form-control" id="comment" placeholder="Escribe tu comentario aquí"
+                        onkeydown="agregarComentario(event)">
+                </div>
+                <button type="submit" onClick="agregarComentario(event)" class="btn btn-primary">Enviar -
+                    OnClick</button>
+            </form>
+            <br>
+            <h2>Listado de comentarios:</h2>
+            <ul id="comment-list" onclick="eliminarComentario(event)"></ul>
+        </div>
+
+    </main>
+
+</body>
+
+
+
+</html>
