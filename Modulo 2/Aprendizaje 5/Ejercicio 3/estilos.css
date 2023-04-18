@@ -1,0 +1,32 @@
+main {
+    text-align: center;
+}
+
+.semaforo {
+    margin: 0 auto;
+    text-align: center;}
+
+.rojo {
+    margin: 0 auto;
+    text-align: center;
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+.amarillo {
+    margin: 0 auto;
+    text-align: center;
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+.verde {
+    margin: 0 auto;
+    text-align: center;
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
