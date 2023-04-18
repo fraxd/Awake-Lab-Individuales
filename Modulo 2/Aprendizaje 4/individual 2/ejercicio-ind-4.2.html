@@ -108,9 +108,11 @@
                                             que
                                             requieren
                                             creatividad y habilidades técnicas.</p>
-                                        <button class="btn btn-primary"
-                                            onclick="location.href='http://www.example.com'">Descargar
-                                            CV</button><br><br>
+                                        <button type="button" class="btn btn-info w-25 mx-auto" data-bs-toggle="tooltip"
+                                            title="Soy el mejor">Secreto 2</button>
+                                        <button type="button" class="btn btn-info w-25 mx-auto" data-bs-toggle="tooltip"
+                                            title="Tengo 1 gato">Secreto 2</button>
+                                        <br><br>
 
                                     </div>
                                 </section>
@@ -121,10 +123,10 @@
                             <div class="col-12 col-md-12 col-lg mt-2">
                                 <!-- Estudios-->
                                 <section class="card" id="Estudios">
-                                    <div >
+                                    <div>
                                         <h3 class="ms-1"><u>Estudios</u></h3>
                                         <p class="ms-1">
-                                            <b >Bootcamp FullStack Python</b> <br>
+                                            <b>Bootcamp FullStack Python</b> <br>
                                             Awakelab <br>
                                             <span class="badge bg-warning">En proceso</span>
                                             2023
@@ -169,7 +171,7 @@
                             <div class="col-12 col-md-12 col-lg-12">
                                 <div class="card" id="Conocimientos">
                                     <p class="fs-3 text-center">Conocimientos</p>
-                                    <span class="badge badge-pill bg-info w-25">Hasta el momento</span>
+                                    <span class="badge badge-pill bg-info w-25 mx-auto">Hasta el momento</span>
                                     <table class="table text-center">
                                         <thead>
                                             <tr>
@@ -254,6 +256,9 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <button type="button" class="btn btn-primary w-25 mx-auto mb-2"
+                                        data-bs-toggle="tooltip"
+                                        title="No es una practica recomendada ya poner porcentajes o estrellas a los conocimientos.">Info</button>
                                 </div>
 
                             </div>
@@ -349,6 +354,12 @@
             Ningun derecho reservado.
         </div>
     </footer>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 </body>
 
 </html>
