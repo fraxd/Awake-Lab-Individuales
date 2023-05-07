@@ -1,53 +1,47 @@
-
-class usuario:
-    def __init__(self, nombre, mail, password):
-        self.nombre = nombre
-        self.mail = mail
-        self.password = password
-
-class cliente(usuario):
-    def __init__(self, nombre, mail, password, dirrecion):
+class cliente:
+    def __init__(self, nombre, mail, password, dirrecion, saldo):
         self.nombre = nombre
         self.mail = mail
         self.password = password
         self.dirrecion = dirrecion
-        self.pedidos = []
+        self.saldo = saldo
     
-    def hacerPedidos():
-        #logica interna
-        return True
-
     def cambiarDirrecion(self, dirrecion):
         self.dirrecion = dirrecion
-        return True
-    
-    def anularPedido(self, id_pedido):
-        for pedido in self.pedidos:
-            if pedido['id_pedido'] == id_pedido:
-                pedido.pop()
-                return True
-        return False
+        print('Dirrecion Cambiada Correctamente')
 
-class vendedor(usuario):
+    def sumarSaldo(self, saldo):
+        self.saldo += saldo
+        print('Saldo Actualizado')
+    
+    def ocuparSaldo(self, monto):
+        if self.saldo >= monto:
+            self.saldo -= monto
+            print('Saldo Descontado')
+            return True
+        else:
+            print('Saldo Insuficiente')
+            return False
+        
+
+class vendedor:
     def __init__(self, nombre, mail, password, id_supervisor):
         self.nombre = nombre
         self.mail = mail,
         self.password = password
         self.id_supervisor = id_supervisor
+        self.comision = 0
     
-    def realizarVenta(self, productos , mail_Cliente):
-        #Logica Interna Misteriosa
-        return True
+    def sumarComision(self, monto_Venta):
+        self.comision = monto_Venta*0.02 #Osea el 2%
     
-    def gestionarCambios(self, id_pedido, producto):
-        #Logica Interna
-        return True
+    def changePassword(self, newPassword):
+        self.password = newPassword
     
     def cambiarSupervisor(self, id_supervisor):
-        #logica interna
-        return True
+        self.id_supervisor = id_supervisor
 
-class supervisor(usuario):
+class supervisor:
     def __init__(self, nombre, mail, password):
         self.nombre = nombre
         self.mail = mail,
@@ -55,14 +49,12 @@ class supervisor(usuario):
         self.id_vendedores  = []
     
     def asignar_vendedores(self, id_Vendedor):
-        #logica interna
-        return True
+        self.id_vendedores.append(id_Vendedor)
     
     def rehusar_vendedor(self, id_Vendedor):
-        #logica Interna
-        return True
+        self.id_vendedores.remove(id_Vendedor)
+        print('Vendedor Removido')
     
-    def generar_reportes(self):
-        #logica interna
-        return True
-    
+    def print_id_vendedores(self):
+        for id_vendedores in self.id_vendedores:
+            print(id_vendedores)        
