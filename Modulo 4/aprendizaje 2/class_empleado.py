@@ -4,16 +4,34 @@ class empleado():
     apellido = str
     sueldo = int
     area = str
+    encargado = int ## Almacena el Id del encargado 
+    status = True ## si es false esta despedido
     
-    def __init__(self, id, nombre, apellido, sueldo, area):
+    def __init__(self, id, nombre, apellido, sueldo, area, encargado=''):
         self.id = id
         self.nombe = nombre
         self.apellido = apellido
         self.sueldo = sueldo
         self.area  = area
+        self.encargado = encargado
+
+    def setArea(self, area):
+        self.area = area
     
+    def getArea(self):
+        return self.area
+    
+    def getId(self):
+        return self.id
 
+    def saludar(self):
+        print('Hola soy {nombre}, mi area es {area} ')
 
+    def desactivar(self):
+        self.status = False
+    
+    def activar(self):
+        self.status= True
 # Carga los empleados
 
 def cargar_empleados():

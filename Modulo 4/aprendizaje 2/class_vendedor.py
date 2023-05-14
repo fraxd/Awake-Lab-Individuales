@@ -16,6 +16,13 @@ class vendedor():
         self.id_clientes = []
         self.id_pedidos = []
 
+    def add_comision(self, monto): # Añade comision y retorna el total
+        self.comisiones += monto
+        return self.comisiones
+    
+    def calcular_sueldo_total(self):
+        return self.sueldo_base + self.comisiones
+    
 
 ## cargar vendedores
 def cargar_vendedores():

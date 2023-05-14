@@ -8,7 +8,10 @@ class producto:
         self.nombre = nombre
         self.precio = precio
 
+    def __eq__(self, other):  ## Sobre carga de metodos
+        return self.sku == other.sku
     
+
 
 def cargar_data():
     producto_1 = producto(44623546, 'Resma Carta x 500', 4320)

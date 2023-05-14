@@ -14,6 +14,17 @@ class jefe():
         self.id_empleados = id_empleados
         self.id_vendedores = id_vendedores
 
+    def despedir(self, empleado):
+        self.id_empleados.remove(empleado.getId())
+        empleado.desactivar()
+        print('El empleado {empleado.nombre} a sido despedido.')
+
+    def recontratar(self, empleado):
+        self.id_empleados.append(empleado.getId())
+        empleado.activar()
+
+    def saludar(self):
+        print('Hola mi nombre es {self.nombre}, soy el jefe y tengo a mi cargo a {self.id_empleados.len} empleados y a {self.id_Vendedores.len} vendedores')
 
 # Cargar Jefe
 

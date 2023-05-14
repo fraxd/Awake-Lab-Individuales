@@ -19,8 +19,8 @@ class cliente(): ## clientes empresa
     def calcular_cupo_disponible(self):
         return self.cupo_Credito - self.credito_consumido
     
-    def set_cupo_credito(self, cupo):
-        self.cupo_Credito = cupo
+    def aumentarCupo(self, cupo):
+        self.cupo_Credito += cupo
 
     def get_cupo_credito(self):
         return self.cupo_Credito
