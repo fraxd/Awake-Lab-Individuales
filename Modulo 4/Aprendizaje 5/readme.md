@@ -1,0 +1,3 @@
+#Franco Fuentes Soto
+
+El manejo de errores nos permite controlar y prevenir cualquier alteracion en el curso natural del programa, sea por errores internos, errores del usuario o de uno de los sistemas intercomunicados el sistema sepa como continuar y que hacer ante ello. Un sistema que esta preparado a los potenciales errores genera una mejor experiencia al usuario y es un sistema mucho mas estable.
