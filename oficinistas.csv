@@ -1,0 +1,6 @@
+id,nombre,apellido,status,email,sueldo_base,area,telefono,edad
+2,Angela,Martin,True,angela@dunder-mifflin.com,800000,Contabilidad,0,0
+3,Kevin,Malone,True,kevin@dunder-mifflin.com,800000,Contabilidad,0,0
+4,Darryl,Philbin,True,darryl@dunder-mifflin.com,1000000,Envios,0,0
+5,Ryan,Howard,True,ryan@dunder-mifflin.com,400000,Practicante,0,0
+6,Meredith,Palmer,True,meredith@dunder-mifflin.com,800000,Compra | Relaciones,0,0

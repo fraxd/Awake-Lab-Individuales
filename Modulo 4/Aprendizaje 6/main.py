@@ -6,6 +6,8 @@ import class_vendedor
 import os  ## Para la funcion de limpiar Pantalla
 import time ## Para el controlar Pausas
 from datetime import datetime
+import csv
+import class_usuarios
 
 #Dunder Mifflin
 ## Sistema interno para empresa de venta de papel con funcionales basicas de venta y de RRHH
@@ -13,7 +15,7 @@ from datetime import datetime
 
 productos = class_producto.cargar_data()
 clientes = class_cliente.cargarClientes()
-oficinistas = class_oficinista.cargar_oficinistas()
+oficinistas = {}
 jefe = class_jefe.cargar_jefe()
 vendedores = class_vendedor.cargar_vendedores()
 #Fecha de pago 
@@ -29,14 +31,33 @@ def limpiar_pantalla():
 def pausa():
     input('Presione Enter para continuar.')
 
+#Login
+def login():
+    while True:
+        limpiar_pantalla()
+        print('Sistemas Computacionales Avanzados')
+        print(' ****** Dunder Mifflin S.A. ******')
+        global usuarios
+        usuarios = class_usuarios.load_usuarios()
+        username = input('Ingrese nombre de usuario: ')
+        password = input('Ingrese contraseña: ')
+        for usuario in usuarios:
+            if usuario.username == username:
+                if usuario.password == password:
+                    menuPrincipal(usuario)
+                    break
+        print('Usuario o contraseña Invalidos, Favor Revisar.')
+        pausa()
+
 # Menu Principal
-def menuPrincipal():
+def menuPrincipal(usuario):
     while True:
         limpiar_pantalla()
         print('Sistemas Computacionales Avanzados')
         print(' ****** Dunder Mifflin S.A. ******')
         print('1.- Recursos Humanos Sistems')
         print('2.- Sistema de Ventas --- NO DISPONIBLE')
+        print('3.- Cambiar contraseña Usuario')
         print('9.- Salir')
         try:
             op = int(input('\nIngrese la opcion a utilizar: '))
@@ -44,6 +65,8 @@ def menuPrincipal():
                 recursosHumanosSystems()
             elif op == 2:
                 print('En desarrollo')
+            elif op == 3:
+                cambiarPassword(usuario)
             elif op == 9:
                 limpiar_pantalla()
                 print('Sistemas Computacionales Avanzados')
@@ -69,6 +92,8 @@ def recursosHumanosSystems():
         print('3.- Listado Vendedores')
         print('4.- Modificar Sueldo Vendedores')
         print('5.- Modificar Fecha de pago.')
+        print('6.- Guardar datos usuarios.')
+        print('7.- Cargar Datos Oficinistas')
         print('9.- Salir')
 
         try:
@@ -88,6 +113,15 @@ def recursosHumanosSystems():
                 input('Presione Enter para continuar')
             elif op == 5:
                 fecha_pagos = modificar_fecha()
+                input('Presione Enter para continuar')
+            elif op ==6:
+                guardar_oficinistas()
+                guardar_vendedores()
+                print('Datos Guardados Correctamente')
+                input('Presione Enter para continuar')
+            elif op == 7:
+                cargar_oficinitas()
+                print('Datos Cargados Correctamente')
                 input('Presione Enter para continuar')
             elif op == 9:
                 limpiar_pantalla()
@@ -169,7 +203,73 @@ def modificar_fecha():
         return None
     finally:
         print('TypeError: Este error es causado porque el valor ingresado no coincide con el tipo de valor que deberia ser, en este caso se espera un tipo Datetime con el formato dd/mm/yyyy en caso de no cumplirlo existe este error.\nSolucion: Verificar que la fecha ingresada siga claramente el formato de datos antes solicitado.')
-menuPrincipal()
+
+def guardar_oficinistas():
+    # Obtener los nombres de los atributos
+    atributos = oficinistas["Angela"].__dict__.keys()
+
+    # Escribir los objetos en un archivo CSV
+    with open("oficinistas.csv", mode="w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow(atributos)  # Escribir los nombres de los atributos como encabezados
+
+        for objeto in oficinistas.values():
+            valores = [getattr(objeto, atributo) for atributo in atributos]
+            writer.writerow(valores)
+    
+def guardar_vendedores():
+    with open("vendedores.csv", "w", newline="") as archivo:
+        writer = csv.writer(archivo, delimiter=",")
+
+        # Escribir encabezados de columnas
+        writer.writerow(["Nombre", "Edad", "Telefono"])
+
+        # Escribir objetos en filas
+        for vendedor in vendedores:
+            writer.writerow(vendedor) #
+
+def cargar_oficinitas():
+    # Leer los datos del archivo CSV
+    try:
+        with open("oficinistas.csv", mode="r") as file:
+            reader = csv.reader(file)
+            headers = next(reader)  # Leer los encabezados
+            for row in reader:  # Leer cada fila de datos
+                id = row[0]
+                nombre = row[1]
+                apellido = row[2]
+                status = row[3]
+                email = row[4]
+                sueldo_base = row[5]
+                area = row[6]
+                telefono = row[7]
+                edad = row[8]
+                usuario = class_oficinista.oficinista(id,nombre, apellido, email, sueldo_base, area, telefono, edad)
+                oficinistas[nombre] = usuario
+    except:
+        print('No se encontro archivo csv de oficinistas.')
+
+def cambiarPassword(usuario):
+    print(f'Cambiando contraseña para {usuario.nombre}')
+    while True:
+        password = input('Ingrese nueva contraseña: ')
+        confirmPassword = input(' Re ingrese nueva contraseña: ')
+        if(confirmPassword == password):
+            usuario.password = password
+            for i in range(len(usuarios)):
+                if usuarios[i].username == usuario.username:
+                    usuarios[i] = usuario
+            print('Contraseña actualizada. Se procede a realizar guardado en "bd".')
+            class_usuarios.save_usuarios(usuarios)
+            break
+        else:
+            print('Las contraseñas no coinciden.')
+
+
+#Inica el Programa
+
+
+login()
 
 
 
