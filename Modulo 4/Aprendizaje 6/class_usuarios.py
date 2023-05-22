@@ -12,6 +12,7 @@ def createUsuarios():
     return  [
         Usuario("John Doe", "johndoe", 1, "123456"),
         Usuario("Jane Smith", "janesmith", 2, "abcdef"),
+        Usuario('Admin', 'admin',3,'admin')
         # Agregar los datos de los otros usuarios
     ]
 

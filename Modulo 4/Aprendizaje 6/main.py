@@ -58,6 +58,9 @@ def menuPrincipal(usuario):
         print('1.- Recursos Humanos Sistems')
         print('2.- Sistema de Ventas --- NO DISPONIBLE')
         print('3.- Cambiar contraseña Usuario')
+        print('3.- crear Usuario')
+        
+        
         print('9.- Salir')
         try:
             op = int(input('\nIngrese la opcion a utilizar: '))
