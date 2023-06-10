@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,12 +13,16 @@
   <body>
     <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand ms-2" href="/"> Banco Simi</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
+          <a class="navbar-brand ms-2" href="/"> <img src="{% static 'assets/logo.png' %}" 
+                    alt="Logo" width="40" class="d-inline-block align-text-top">
+            Banco Simi
+          </a>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Landing</a>
-              <a class="nav-link" href="/users">Usuarios</a>
+              <a class="nav-link" href="/usersBasico">Usuarios</a>
+              <a class="nav-link" href="/crear-usuario">Crear Usuario</a>
 
             </div>
           </div>
