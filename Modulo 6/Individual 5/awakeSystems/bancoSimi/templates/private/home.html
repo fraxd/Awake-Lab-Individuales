@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block title %} Home{% endblock %}
+{% block content %}
+
+<div class="container text-center mt-3">
+    <div class="jumbotron">
+      <h1 class="display-4">¡Bienvenid@ {{nombre}}!</h1>
+      <p class="lead">Disfruta de nuestra plataforma.</p>
+    </div>
+
+    {% if user.is_staff %}
+        <a href="{% url 'Home-vip' %}" class="btn btn-primary">Ir a Zona Staff</a>
+    {% endif %}
+</div>
+
+
+{% endblock %}

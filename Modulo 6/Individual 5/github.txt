@@ -1,0 +1,9 @@
+https://github.com/fraxd/Awake-Lab-Individuales/tree/main/Modulo%206/Individual%204
+
+staff:
+user: bot1
+pass: admin*123
+
+user:
+user: bot2
+pass: admin*123
