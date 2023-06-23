@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  {% extends 'base.html' %} {% block title %} Listado de usuarios {% endblock %}
+  {% block content %}
+  <body
+    style="background-image: linear-gradient(135deg, #81fbb8 10%, #28c76f 100%)"
+  >
+    <div class="container">
+      <h1>Listado de usuarios</h1>
+      <table class="table">
+        <tr>
+          <th>Usuario</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Es Superusuario</th>
+          <th>Fecha de registro</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+          <td>{{ user.username }}</td>
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.last_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.is_superuser }}</td>
+          <td>{{ user.date_joined }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+  {% endblock %}
+</html>
