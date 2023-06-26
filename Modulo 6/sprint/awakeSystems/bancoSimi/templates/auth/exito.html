@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+<script>
+    setTimeout(function() {
+        window.location.href = "/accounts/login";  // Cambia "/login" por la URL de inicio de sesión de tu aplicación
+    }, 5000);  // 5000 milisegundos = 5 segundos
+</script>
+{% block title %} Crear Usuario {% endblock %}
+{% block content %}
+
+    <div class="container">
+        <div clas="card">
+            <div class="card-body">
+                <h3> Creacion Exitosa </h3>
+                <p> Redireccionando a la página de inicio de sesión...<br/>
+                    Si no eres redirigido automáticamente, haz clic <a href="/accounts/login">aquí</a>.</p>
+            </div>
+
+        </div>
+    
+    </div>
+
+
+{% endblock %}

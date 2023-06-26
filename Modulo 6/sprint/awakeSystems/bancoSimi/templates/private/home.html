@@ -1,0 +1,27 @@
+{% extends 'private/base_private.html' %} {% block title %} Home{% endblock %}
+{% block content %}
+
+<div class="container text-center mt-3">
+    <div class="jumbotron">
+      <h1 class="display-4">¡Bienvenid@ {{nombre}}!</h1>
+      <p class="lead">Disfruta de nuestra plataforma.<br/>
+        Rol: {{rol}}
+      </p>
+    </div>
+
+    {% if rol == 'Cliente' %}
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Datos del Usuario</h5>
+            <p class="card-text">Usuario: {{ request.user.username }}</p>
+            <p class="card-text">Nombre: {{ request.user.first_name }}</p>
+            <p class="card-text">Apellido: {{ request.user.last_name }}</p>
+            <p class="card-text">Email: {{ request.user.email }}</p>
+            <p class="card-text">Grupo: {{ request.user.groups.first }}</p>
+        </div>
+      </div>
+    {% endif %} 
+</div>
+
+
+{% endblock %}
