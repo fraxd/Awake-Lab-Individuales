@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  {% extends 'base_public.html' %} {% block title %} To Do List {% endblock %} 
+  {% block content %}
+
+  <body
+    style="
+      background-image: linear-gradient(
+        45deg,
+        #ff9a9e 0%,
+        #fad0c4 99%,
+        #fad0c4 100%
+      );
+    "
+  >
+    <main class="container mt-5 text-center">
+      <h1>Bienvenido a To Do List</h1>
+      <p>La plataforma menos innovadora del siglo 21, un To Do List para que te registres, lo uses una vez y te olvides!</p>
+      <a href="/login" class="btn btn-primary">Inicia Sesion</a>
+
+    </main>
+  </body>
+  {% endblock %}
+</html>
