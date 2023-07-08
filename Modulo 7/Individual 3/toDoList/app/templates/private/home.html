@@ -1,0 +1,44 @@
+{% extends 'private/base_private.html' %} {% block title %} Home{% endblock %}
+{% block content %}
+
+<div class="container text-center mt-3">
+    <div class="jumbotron">
+      <h1 class="display-4">¡Bienvenid@ {{nombre}}!</h1>
+      <p class="lead">Disfruta de nuestra plataforma.<br/></p>
+    </div>
+    <div class="card p-2">
+      <div class="d-grid gap d-md-block">        
+        <button type="button" class="btn btn-info">Agregar Nueva Tarea</button>
+      </div>
+      {% if tareas %}
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Tarea</th>
+              <th scope="col">Fecha Vencimiento</th>
+              <th scope="col">Ver Mas</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for tarea in tareas %}
+            <tr>
+              <td>{{ tarea.titulo }}</td>
+              <td>{{ tarea.fecha_vencimiento |date:"d F Y"  }}</td>
+              <td>
+                <a href="{% url 'tarea_view' tarea.id %}" class="btn btn-info">Ver</a>
+              </td>
+            </tr>
+            {% endfor %}
+            
+            
+          </tbody>
+        </table>
+      {% else %}
+        <h4> Tu lista de tareas esta vacia. </h4>
+
+      {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}
