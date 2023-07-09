@@ -1,0 +1,31 @@
+{% extends 'base_public.html' %} {% block title %} Crear Usuario {% endblock %}
+{% if error_message %}
+<p>{{ error_message }}</p>
+{% endif %}
+{% block content %}
+<div class="container">
+  <div class="card row justify-content-center">
+    <div class="card-body">
+      <div class="col-md-4 offset-md-4">
+        <form method="post">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="username" class="form-label">Nombre de usuario</label>
+            <input type="text" class="form-control" name="username" required  >
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2">Iniciar sesión</button>
+          <div>
+            {% if error_message %}
+              <p class="text-danger">{{ error_message }}</p>
+            {% endif %}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
