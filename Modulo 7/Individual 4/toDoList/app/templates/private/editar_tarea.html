@@ -1,0 +1,61 @@
+{% extends 'private/base_private.html' %} {% block title %} Home{% endblock %}
+{% block content %}
+
+<div class="container text-center mt-3">
+    <form method="POST" class="my-4">
+        {% csrf_token %}
+        {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Título" aria-label="Título" id="{{form.titulo.id_for_label}}" name="{{form.titulo.name}}" value="{{tarea.titulo}}">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Fecha Vencimiento" aria-label="Fecha Vencimiento" id="{{ form.fecha_vencimiento.id_for_label }}" name="{{form.fecha_vencimiento.name}}" value="{{tarea.fecha_vencimiento|date:'d/m/Y'}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="Etiqueta">Etiqueta:</label>
+                    {% if tarea.etiqueta %}
+                        <b>Actualmente: {{tarea.etiqueta}}</b>
+                    {% endif %}
+                    {{ form.etiqueta }}
+                </div>
+            </div>
+            {% comment "" %}
+                La idea es poner el estado aca cuando se edita
+            {% endcomment %}
+            {% if tarea.estado  %}
+                <div class="col mt-1">
+                    <div class="form-group">
+                        <label for="{{ form.estado.id_for_label }}">Estado:</label>
+                        {% if tarea.estado %}
+                            <b>Actualmente: {{tarea.estado}}</b>
+                        {% endif %} <br>
+                        {{ form.estado }}
+                    </div>
+                    
+                </div>
+
+            {% endif %}
+        </div>
+        <div class="row ">
+            <div class="form-group">
+                <label for="{{form.descripcion.id_for_label}}" class="form-label">Descripción:</label>
+                <textarea class="form-control" id="{{form.descripcion.id_for_label}}" name="{{form.descripcion.name}}" rows="3">{{tarea.descripcion}}</textarea>                
+            </div>
+        </div>
+
+      
+        <button type="submit" class="btn btn-primary mt-2">Guardar</button>
+    </form>
+</div>
+
+
+{% endblock %}
