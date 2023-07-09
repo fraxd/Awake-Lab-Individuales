@@ -1,6 +1,5 @@
 from .forms import FiltroTareasForm, TareaForm
 from django.contrib.auth import authenticate, login
-from django.forms import Form
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from .models import Tarea
@@ -33,23 +32,18 @@ def home_view(request):
         etiqueta = form.cleaned_data.get('etiqueta')
         estado = form.cleaned_data.get('estado')
         fecha_vencimiento = form.cleaned_data.get('fecha_vencimiento')
-
-        if etiqueta:
-            tareas = tareas.filter(etiqueta=etiqueta)
         if estado:
             tareas = tareas.filter(estado=estado)
+        if etiqueta:
+            tareas = tareas.filter(etiqueta=etiqueta)
         if fecha_vencimiento:
             tareas = tareas.filter(fecha_vencimiento=fecha_vencimiento)
- 
-
 
     return render(request, 'private/home.html', {'nombre': nombre, 'tareas': tareas, 'form':form})
 
 @login_required
 def tarea_view(request, tarea_id):
     tarea = get_object_or_404(Tarea, id=tarea_id)
-    print(tarea.titulo)
-    # form = Form(initial={'titulo': tarea.titulo, 'descripcion': tarea.descripcion, 'fecha_vencimiento': tarea.fecha_vencimiento})
     return render(request, 'private/ver_tarea.html', {'tarea': tarea})
 
 @login_required

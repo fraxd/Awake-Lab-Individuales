@@ -20,7 +20,7 @@
             {{ form.estado.label_tag }}
             {{ form.estado }}
             
-            {{ form.fecha_vencimiento.label_tag }}
+            {{ form.fecha_vencimiento.label_tag }}<small> (dd/mm/yyyy) </small>
             {{ form.fecha_vencimiento }}
       
             <button type="submit" class="btn btn-primary">Filtrar</button>
@@ -29,7 +29,7 @@
           </form>
         </div>
       </div>
-      {% if tareas %}
+      {% if True %}
         <table class="table table-hover">
           <thead>
             <tr>
