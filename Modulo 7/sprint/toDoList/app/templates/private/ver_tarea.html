@@ -1,0 +1,85 @@
+{% extends 'private/base_private.html' %} {% block title %} Ver Tarea{% endblock %} {% block content %}
+
+<div class="container text-center mt-3">
+  <div class="card p-3">
+    <div class="card-header">
+      <div class="row">
+        <div class="col">
+          <a
+            href="/home"
+            class="btn btn-secondary"
+            >Atrás</a
+          >
+        </div>
+        <div class="col text-right"> 
+            <a href="{% url 'editar_tarea' tarea.id %}" class="btn btn-primary">Editar Tarea</a>
+            <a href="{% url 'completar_tarea' tarea.id %}" class="btn btn-success">Completar Tarea</a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal">
+              Eliminar Tarea            
+            </button>
+        </div>
+      </div>
+      <p><strong>Título:</strong> {{ tarea.titulo }}</p>
+      <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+      <p>
+        <strong>Fecha de Vencimiento:</strong> {{ tarea.fecha_vencimiento }}
+      </p>
+      <p>
+        <strong>Etiqueta:</strong> {{ tarea.etiqueta }}
+      </p>
+      <p><strong>Estado:</strong> {{ tarea.estado }}</p>
+      <p><strong>Usuario Asignado:</strong> {{ tarea.usuario }}</p>
+    </div>
+  </div>
+  <div>
+    <form method="POST" action="{% url 'agregar_observacion' tarea.id %}">
+      {% csrf_token %}
+      <textarea class="form-control my-2" name="texto" placeholder="Agregar observación" rows="3"></textarea>
+      <button type="submit" class="btn btn-info mb-3">Agregar</button>
+    </form>
+    
+    <!-- Lista de observaciones anteriores -->
+    <div class="d-flex justify-content-center align-items-center">
+      {% for observacion in observaciones %}
+        <div class="card w-75 text-center">
+          <div class="card-body">
+            <p class="card-text">{{ observacion.texto }}</p>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <small>{{ observacion.timestamp }}</small>
+          </div>
+        </div>
+      {% empty %}
+        <div class="card w-75 text-center">
+          <div class="card-body">
+            <p class="card-text">Sin observaciones por el momento.</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmacion Eliminacion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Esta seguro que desea eliminar esta tarea? <br>
+          <strong>No se puede revertir.</strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="{% url 'eliminar_tarea' tarea.id %}" class="btn btn-danger">Eliminar</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+</div>
