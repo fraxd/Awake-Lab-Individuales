@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  {% extends 'base_public.html' %} {% block title %} To Do List {% endblock %} 
+  {% block content %}
+
+  <body
+    style="
+      background: #73C8A9;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #373B44, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #373B44, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    "
+  >
+    <main class="container mt-5 text-center">
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-danger">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+      
+        <div class="card p-2">
+            <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_email">Email</label>
+                    <input type="text" class="form-control" id="{{ form.email.id_for_label }}" name="{{ form.email.name }}" required placeholder="ejemplo@pentagono.com">
+                </div>
+                <div class="form-group">
+                    <label for="id_nombre">Nombre</label>
+                    <input type="text" class="form-control" id="{{ form.nombre.id_for_label }}" name="{{ form.nombre.name }}" required placeholder="Juan">
+                </div>
+                <div class="form-group">
+                    <label for="id_apellidos">Apellidos</label>
+                    <input type="text" class="form-control" id="{{ form.apellidos.id_for_label }}" name="{{ form.apellidos.name }}" required placeholder="Perez">
+                </div>
+                <div class="form-group">
+                    <label for="id_rut">RUT</label>
+                    <input type="text" class="form-control" id="{{ form.rut.id_for_label }}" name="{{ form.rut.name }}" required placeholder="11111111k">
+                </div>
+                <div class="form-group">
+                    <label for="id_password1">Contraseña</label>
+                    <input type="password" class="form-control" id="{{ form.password1.id_for_label }}" name="{{ form.password1.name }}" required placeholder="P4S$w0rD">
+                </div>
+                <div class="form-group">
+                    <label for="id_password2">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="{{ form.password2.id_for_label }}" name="{{ form.password2.name }}" required placeholder="P4S$w0rD">
+                </div>
+                <div class="form-group">
+                    <label for="id_direccion">Direccion</label>
+                    <input type="text" class="form-control" id="{{ form.direccion.id_for_label }}" name="{{ form.direccion.name }}" required placeholder="Por Ahi #231, talca">
+                </div>
+            
+                <button type="submit" class="btn btn-primary mt-2">Registrar</button>
+            </form>
+            
+            
+
+        </div>
+
+    </main>
+  </body>
+  {% endblock %}
+</html>
+
+

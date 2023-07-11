@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  {% extends 'base_public.html' %} {% block title %} To Do List {% endblock %} 
+  {% block content %}
+
+  <body
+    style="
+      background: #73C8A9;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #373B44, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #373B44, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    "
+  >
+    <main class="container mt-5 text-center">
+      <h1>Bienvenido a TeLoEnvioApp</h1>
+      <p>La plataforma menos innovadora del siglo 21, Gestiona, compra y sigue tus pedidos</p>
+      <a href="/auth/login" class="btn btn-primary">Inicia Sesion</a>
+      <a href="/auth/register" class="btn btn-primary">Registrate</a>
+
+    </main>
+  </body>
+  {% endblock %}
+</html>
